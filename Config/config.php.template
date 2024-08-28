@@ -1,0 +1,31 @@
+<?php
+ $config = array(
+         //The values are taken from machine_types table in Yama database
+         'MachineTypes' => array(
+                    'VAPP' => 2,
+                    'PHYSICAL' => 3,
+                    'VAPPTEMP' => 4,
+            ),
+         'LeaseTypes' => array(
+                    'VAPPSTORAGE' => 1,
+                    'VAPPRUNTIME' => 2,
+                    'PHYSICAL' => 3,
+                    'CATVAPPSTORAGE' => 4,
+            ),
+         'SPP' => array(
+                    'STOPVAPP' => '/Vapps/stop_vapp_api/vapp_id:',
+                    'VAPPDESTROY' => '/Vapps/destroy_vapp_api/vapp_id:',
+                    'CATVAPPDELETE' => '/VappTemplates/delete_api/vapp_template_id:',
+                    'CATVAPPISEXISTS' => '/VappTemplates/is_exists/vapp_template_id:',
+                    'CATVAPPDETAILS' => '/VappTemplates/catalog_details_from_vapptemplateid/template_id:',
+            ),
+         'LeaseLengths' => array(
+                    'VappRuntime' => '30',  //Number of days before Vapp will be powered off
+                    'VappStorage' => '40',  //Number of days before Vapp will be deleted
+                    'SyncRuntime' => '3',   //Number of days before sync_Vapp will be powered off
+                    'SyncStorage' => '3',   //Number of days before sync_Vapp will be deleted
+                    'VappTemplateStorage' => '40',   //Number of days before Vapp Template will be deleted
+                    'NotificationPeriod' => '5',    //Number of days reminders will be sent before power_off/deletion
+            ),
+    );
+?>
